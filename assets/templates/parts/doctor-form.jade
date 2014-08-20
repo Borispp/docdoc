@@ -1,0 +1,31 @@
+div(data-role='page', id='doctor-form', data-title='Записаться на прием')
+	div.fixed(data-role='header', data-position='fixed', data-tap-toggle='false')
+		.fixed-inn
+			a.back-link(href='#page-doctor', data-transition='slide', data-direction='reverse')
+			strong Записаться на прием
+		.fixed-inn.w-500.doctor-info-block
+			.left-block
+				.avatar-wrap
+					img(src='./public/img/pics/ava130-2.png', alt='Мельков Евгений Евгеньевич')
+			.right-block
+				h3.name Мельков Евгений Евгеньевич
+				strong.prof Хирург, Анестезиолог 
+	div.ui-content.doctor-order-form(role='main')
+		form(action='#')
+			.form-item.item-1
+				input.required(type='text', placeholder='Ваше имя...')
+				i
+			.form-item.item-2
+				input(type='tel', placeholder='Ваш телефон...' onkeypress='return (event.charCode >= 40 && event.charCode <= 57) || event.charCode == 32' maxlength='20')#phoneinput
+				i
+			.form-item.item-3
+				textarea(cols='20',rows='10', placeholder='Ваш коментарий...')
+				i
+			.send-button-wrap
+				a(href='#order-success', data-transition='fade') <i></i> отправить
+		div.call-us
+			strong Записаться на прием 
+			span по номеру <a href='tel:8-495-236-72-76'>8 (495) 236-72-76</a>
+			i.iphone-bg
+		a.link-to-site(href='http://docdoc.ru/') Перейти на основную версию сайта
+		i.doctor-bottom

@@ -1,0 +1,1039 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8">
+    <title>DocDoc.ru</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, userscalable=no">
+    <link href="./public/css/style.css" rel="stylesheet">
+    <script src="./public/js/libs/jquery/jquery.min.js"></script>
+    <script src="./public/js/libs/jquery-mobile/jquery-mobile-min.js"></script>
+    <script src="https://maps.google.com/maps/api/js?sensor=true"></script>
+    <script src="./public/js/libs/infobox/infobox.js"></script>
+    <script src="./public/js/script.js"></script>
+</head>
+
+<body>
+    <div data-role="page" id="index-page" data-title="DocDoc.ru">
+        <div data-role="header">
+            <div class="city-dropdown-wrapper">
+                <select>
+                    <option>Москва</option>
+                    <option>Санкт-Петербург</option>
+                    <option>Екатеринбург</option>
+                </select><i></i>
+            </div>
+        </div>
+        <div class="vertical-center">
+            <div class="index-img-wrapper"><i></i>
+            </div>
+            <ul class="items-listing">
+                <li class="item-1"><strong>56487</strong><span>записей</span><i></i>
+                </li>
+                <li class="item-2"><strong>23678</strong><span>врачей</span><i></i>
+                </li>
+                <li class="item-3"><strong>45123</strong><span>отзывов</span><i></i>
+                </li>
+            </ul>
+            <div role="main" class="ui-content">
+                <div class="index-main-block-wrapper">
+                    <div class="index-main-block">
+                        <h3>Я ищу врача:</h3>
+                        <div class="imb-content">
+                            <p>Ищите врачей, указав ближайшую станцию метро. Система подберет врачей, работающих в вашем районе.</p>
+                            <div class="top-index-link f-s"><a href="#select-specialist" data-transition="slideup">Выбрать специалиста<span></span><i></i></a>
+                            </div>
+                            <div class="top-index-link f-m"><a href="#select-metro" data-transition="slideup">Ближайшее метро<span></span><i></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="find-doctor"><a href="#find-doctor" data-transition="slide">Найти врача<i></i></a>
+                    </div>
+                </div>
+            </div>
+            <div data-role="footer">
+                <div class="call-us"><strong>Поможем найти врача </strong><span>звоните <a href='tel:8-495-236-72-76'>8 (495) 236-72-76</a></span><i class="iphone-bg"></i>
+                </div><a href="http://docdoc.ru/" class="link-to-site">Перейти на основную версию сайта</a><i></i>
+            </div>
+        </div>
+    </div>
+    <div data-role="page" id="find-doctor" data-title="Анестезиологи (1 824)">
+        <div id="rightPanel" data-role="panel" data-position="right" data-display="reveal" class="rightPanel">
+            <div class="aside-header"><span class="logo-small"></span>
+                <div class="city-dropdown-wrapper">
+                    <select>
+                        <option>Екатеринбург</option>
+                        <option>Москва</option>
+                        <option>Санкт-Петербург</option>
+                    </select><i></i>
+                </div>
+            </div>
+            <div class="aside-description">
+                <p>На нашем портале вы можете выбрать врача и записаться к нему на прием.</p>
+                <p>Мы поможем вам найти хорошего специалиста!</p>
+            </div>
+            <div class="aside-block mb-15"><strong>О проекте</strong>
+                <ul>
+                    <li><a href="#">О сервисе</a><i></i>
+                    </li>
+                    <li><a href="#">Все врачи</a><i></i>
+                    </li>
+                    <li><a href="#">Все клиники</a><i></i>
+                    </li>
+                </ul>
+            </div>
+            <div class="aside-block"><strong>Врачам и клиникам</strong>
+                <ul>
+                    <li><a href="#">Личный кабинет</a><i></i>
+                    </li>
+                    <li><a href="#">Регистрация</a><i></i>
+                    </li>
+                </ul>
+            </div>
+            <div class="aside-foo"><a href="http://docdoc.ru/">Перейти на основную версию сайта</a>
+            </div>
+        </div>
+        <div data-role="header" data-position="fixed" class="fixed">
+            <div data-transition="slide" class="hide-scroll">
+                <div class="fixed-inn">
+                    <a href="#index-page" data-transition="slide" data-direction="reverse" class="back-link"></a><strong>Анестезиологи (1 824)</strong><span>м. Войковская</span>
+                    <a href="#rightPanel" class="panel-btn"></a>
+                </div>
+                <div class="fixed-inn w-500">
+                    <p class="description">На нашем портале вы можете выбрать врача и записаться к нему на прием. Найти первоклассного специалиста вам помогут анкеты врачей, а также отзывы пацентов.</p>
+                </div>
+            </div>
+            <div class="top-sort-block w-500">
+                <div class="sort-doctor-wrapper">
+                    <select>
+                        <option>Сортировать по рейтингу</option>
+                        <option>Сортировать по стоимости</option>
+                        <option>Сортировать по близости</option>
+                        <option>Сортировать по стажу</option>
+                    </select><span class="triangle"></span>
+                </div>
+                <a href="#" class="location-link"></a>
+            </div>
+        </div>
+        <div role="main" class="ui-content padding-zero">
+            <ul class="list-of-doctors">
+                <li>
+                    <a href="#page-doctor" data-transition="slide">
+                        <div class="left-block">
+                            <div class="avatar-wrap">
+                                <img src="./public/img/pics/ava130-2.png" alt="Мельков Евгений Евгеньевич">
+                            </div>
+                            <div class="rating-wrap"><strong>6.4</strong>
+                                <ul>
+                                    <li class="full"></li>
+                                    <li class="full"></li>
+                                    <li class="full"></li>
+                                    <li class="empty"></li>
+                                    <li class="empty"></li>
+                                </ul>
+                            </div><span class="qty-reviews">2 отзыва</span>
+                        </div>
+                        <div class="right-block">
+                            <h3 class="name">Мельков Евгений Евгеньевич</h3><strong class="prof">Хирург, Анестезиолог </strong>
+                            <div class="skills-wrap"><span class="left">Стаж: <b>25 лет</b></span><span class="right">Прием: <b>1 200 <span>i</span>
+                                </b>
+                                </span>
+                            </div>
+                            <div class="address-wrap"><i></i> ул. Клары Цеткин, д. 33, к. 28</div>
+                        </div><i></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="#page-doctor" data-transition="slide">
+                        <div class="left-block">
+                            <div class="avatar-wrap">
+                                <img src="./public/img/pics/ava130.png" alt="Саркисова Наталья Георгиевна">
+                            </div>
+                            <div class="rating-wrap"><strong>8.2</strong>
+                                <ul>
+                                    <li class="full"></li>
+                                    <li class="full"></li>
+                                    <li class="full"></li>
+                                    <li class="full"></li>
+                                    <li class="empty"></li>
+                                </ul>
+                            </div><span class="qty-reviews">1 отзыв</span>
+                        </div>
+                        <div class="right-block">
+                            <h3 class="name">Саркисова Наталья Георгиевна</h3><strong class="prof">Анестезиолог </strong>
+                            <div class="skills-wrap"><span class="left">Стаж: <b>18 лет</b></span><span class="right">Прием: <b>1 700 <span>i</span>
+                                </b>
+                                </span>
+                            </div>
+                            <div class="address-wrap"><i></i> ул. Клары Цеткин, д. 33, к. 28</div>
+                        </div><i></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="#page-doctor" data-transition="slide">
+                        <div class="left-block">
+                            <div class="avatar-wrap">
+                                <img src="./public/img/pics/ava130-2.png" alt="Мельков Евгений Евгеньевич">
+                            </div>
+                            <div class="rating-wrap"><strong>9.9</strong>
+                                <ul>
+                                    <li class="full"></li>
+                                    <li class="full"></li>
+                                    <li class="full"></li>
+                                    <li class="full"></li>
+                                    <li class="full"></li>
+                                </ul>
+                            </div><span class="qty-reviews">3 отзыва</span>
+                        </div>
+                        <div class="right-block">
+                            <h3 class="name">Мельков Евгений Евгеньевич</h3><strong class="prof">Анестезиолог </strong>
+                            <div class="skills-wrap"><span class="left">Стаж: <b>27 лет</b></span><span class="right">Прием: <b>1 800 <span>i</span>
+                                </b>
+                                </span>
+                            </div>
+                            <div class="address-wrap"><i></i> ул. Клары Цеткин, д. 33, к. 28</div>
+                        </div><i></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="#page-doctor" data-transition="slide">
+                        <div class="left-block">
+                            <div class="avatar-wrap">
+                                <img src="./public/img/pics/ava130.png" alt="Саркисова Наталья Георгиевна">
+                            </div>
+                            <div class="rating-wrap"><strong>8.3</strong>
+                                <ul>
+                                    <li class="full"></li>
+                                    <li class="full"></li>
+                                    <li class="full"></li>
+                                    <li class="full"></li>
+                                    <li class="empty"></li>
+                                </ul>
+                            </div><span class="qty-reviews">2 отзыва</span>
+                        </div>
+                        <div class="right-block">
+                            <h3 class="name">Саркисова Наталья Георгиевна</h3><strong class="prof">Хирург, Анестезиолог </strong>
+                            <div class="skills-wrap"><span class="left">Стаж: <b>19 лет</b></span><span class="right">Прием: <b>1 200 <span>i</span>
+                                </b>
+                                </span>
+                            </div>
+                            <div class="address-wrap"><i></i> ул. Клары Цеткин, д. 33, к. 28</div>
+                        </div><i></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="#page-doctor" data-transition="slide">
+                        <div class="left-block">
+                            <div class="avatar-wrap">
+                                <img src="./public/img/pics/ava130-2.png" alt="Мельков Евгений Евгеньевич">
+                            </div>
+                            <div class="rating-wrap"><strong>9.9</strong>
+                                <ul>
+                                    <li class="full"></li>
+                                    <li class="full"></li>
+                                    <li class="full"></li>
+                                    <li class="full"></li>
+                                    <li class="empty"></li>
+                                </ul>
+                            </div><span class="qty-reviews">2 отзыва</span>
+                        </div>
+                        <div class="right-block">
+                            <h3 class="name">Мельков Евгений Евгеньевич</h3><strong class="prof">Хирург, Анестезиолог </strong>
+                            <div class="skills-wrap"><span class="left">Стаж: <b>25 лет</b></span><span class="right">Прием: <b>1 200 <span>i</span>
+                                </b>
+                                </span>
+                            </div>
+                            <div class="address-wrap"><i></i> ул. Клары Цеткин, д. 33, к. 28</div>
+                        </div><i></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="#page-doctor" data-transition="slide">
+                        <div class="left-block">
+                            <div class="avatar-wrap">
+                                <img src="./public/img/pics/ava130-2.png" alt="Мельков Евгений Евгеньевич">
+                            </div>
+                            <div class="rating-wrap"><strong>6.4</strong>
+                                <ul>
+                                    <li class="full"></li>
+                                    <li class="full"></li>
+                                    <li class="full"></li>
+                                    <li class="empty"></li>
+                                    <li class="empty"></li>
+                                </ul>
+                            </div><span class="qty-reviews">2 отзыва</span>
+                        </div>
+                        <div class="right-block">
+                            <h3 class="name">Мельков Евгений Евгеньевич</h3><strong class="prof">Хирург, Анестезиолог </strong>
+                            <div class="skills-wrap"><span class="left">Стаж: <b>25 лет</b></span><span class="right">Прием: <b>1 200 <span>i</span>
+                                </b>
+                                </span>
+                            </div>
+                            <div class="address-wrap"><i></i> ул. Клары Цеткин, д. 33, к. 28</div>
+                        </div><i></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="#page-doctor" data-transition="slide">
+                        <div class="left-block">
+                            <div class="avatar-wrap">
+                                <img src="./public/img/pics/ava130.png" alt="Саркисова Наталья Георгиевна">
+                            </div>
+                            <div class="rating-wrap"><strong>8.2</strong>
+                                <ul>
+                                    <li class="full"></li>
+                                    <li class="full"></li>
+                                    <li class="full"></li>
+                                    <li class="full"></li>
+                                    <li class="empty"></li>
+                                </ul>
+                            </div><span class="qty-reviews">1 отзыв</span>
+                        </div>
+                        <div class="right-block">
+                            <h3 class="name">Саркисова Наталья Георгиевна</h3><strong class="prof">Анестезиолог </strong>
+                            <div class="skills-wrap"><span class="left">Стаж: <b>18 лет</b></span><span class="right">Прием: <b>1 700 <span>i</span>
+                                </b>
+                                </span>
+                            </div>
+                            <div class="address-wrap"><i></i> ул. Клары Цеткин, д. 33, к. 28</div>
+                        </div><i></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="#page-doctor" data-transition="slide">
+                        <div class="left-block">
+                            <div class="avatar-wrap">
+                                <img src="./public/img/pics/ava130-2.png" alt="Мельков Евгений Евгеньевич">
+                            </div>
+                            <div class="rating-wrap"><strong>9.9</strong>
+                                <ul>
+                                    <li class="full"></li>
+                                    <li class="full"></li>
+                                    <li class="full"></li>
+                                    <li class="full"></li>
+                                    <li class="full"></li>
+                                </ul>
+                            </div><span class="qty-reviews">3 отзыва</span>
+                        </div>
+                        <div class="right-block">
+                            <h3 class="name">Мельков Евгений Евгеньевич</h3><strong class="prof">Анестезиолог </strong>
+                            <div class="skills-wrap"><span class="left">Стаж: <b>27 лет</b></span><span class="right">Прием: <b>1 800 <span>i</span>
+                                </b>
+                                </span>
+                            </div>
+                            <div class="address-wrap"><i></i> ул. Клары Цеткин, д. 33, к. 28</div>
+                        </div><i></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="#page-doctor" data-transition="slide">
+                        <div class="left-block">
+                            <div class="avatar-wrap">
+                                <img src="./public/img/pics/ava130.png" alt="Саркисова Наталья Георгиевна">
+                            </div>
+                            <div class="rating-wrap"><strong>8.3</strong>
+                                <ul>
+                                    <li class="full"></li>
+                                    <li class="full"></li>
+                                    <li class="full"></li>
+                                    <li class="full"></li>
+                                    <li class="empty"></li>
+                                </ul>
+                            </div><span class="qty-reviews">2 отзыва</span>
+                        </div>
+                        <div class="right-block">
+                            <h3 class="name">Саркисова Наталья Георгиевна</h3><strong class="prof">Хирург, Анестезиолог </strong>
+                            <div class="skills-wrap"><span class="left">Стаж: <b>19 лет</b></span><span class="right">Прием: <b>1 200 <span>i</span>
+                                </b>
+                                </span>
+                            </div>
+                            <div class="address-wrap"><i></i> ул. Клары Цеткин, д. 33, к. 28</div>
+                        </div><i></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="#page-doctor" data-transition="slide">
+                        <div class="left-block">
+                            <div class="avatar-wrap">
+                                <img src="./public/img/pics/ava130-2.png" alt="Мельков Евгений Евгеньевич">
+                            </div>
+                            <div class="rating-wrap"><strong>9.9</strong>
+                                <ul>
+                                    <li class="full"></li>
+                                    <li class="full"></li>
+                                    <li class="full"></li>
+                                    <li class="full"></li>
+                                    <li class="empty"></li>
+                                </ul>
+                            </div><span class="qty-reviews">2 отзыва</span>
+                        </div>
+                        <div class="right-block">
+                            <h3 class="name">Мельков Евгений Евгеньевич</h3><strong class="prof">Хирург, Анестезиолог </strong>
+                            <div class="skills-wrap"><span class="left">Стаж: <b>25 лет</b></span><span class="right">Прием: <b>1 200 <span>i</span>
+                                </b>
+                                </span>
+                            </div>
+                            <div class="address-wrap"><i></i> ул. Клары Цеткин, д. 33, к. 28</div>
+                        </div><i></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div data-role="footer" data-position="fixed" data-tap-toggle="false">
+            <div class="fixed-inn">
+                <div class="w-500"><span class="filter-number">подобрать врача по номеру</span>
+                    <div class="call-doctor-btn"><a href="tel:8-495-236-72-76"><i></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="mask-overlay"></div>
+    </div>
+    <div data-role="page" id="page-doctor" data-title="Информация о враче">
+        <div id="rightPanelDoctor" data-role="panel" data-position="right" data-display="reveal" class="rightPanel">
+            <div class="aside-header"><span class="logo-small"></span>
+                <div class="city-dropdown-wrapper">
+                    <select>
+                        <option>Екатеринбург</option>
+                        <option>Москва</option>
+                        <option>Санкт-Петербург</option>
+                    </select><i></i>
+                </div>
+            </div>
+            <div class="aside-description">
+                <p>На нашем портале вы можете выбрать врача и записаться к нему на прием.</p>
+                <p>Мы поможем вам найти хорошего специалиста!</p>
+            </div>
+            <div class="aside-block mb-15"><strong>О проекте</strong>
+                <ul>
+                    <li><a href="#">О сервисе</a><i></i>
+                    </li>
+                    <li><a href="#">Все врачи</a><i></i>
+                    </li>
+                    <li><a href="#">Все клиники</a><i></i>
+                    </li>
+                </ul>
+            </div>
+            <div class="aside-block"><strong>Врачам и клиникам</strong>
+                <ul>
+                    <li><a href="#">Личный кабинет</a><i></i>
+                    </li>
+                    <li><a href="#">Регистрация</a><i></i>
+                    </li>
+                </ul>
+            </div>
+            <div class="aside-foo"><a href="http://docdoc.ru/">Перейти на основную версию сайта</a>
+            </div>
+        </div>
+        <div data-role="header" data-position="fixed" data-tap-toggle="false" class="fixed">
+            <div class="fixed-inn">
+                <a href="#find-doctor" data-transition="slide" data-direction="reverse" class="back-link"></a><strong>Информация о враче</strong>
+                <a href="#rightPanelDoctor" class="panel-btn"></a>
+            </div>
+            <div class="fixed-inn w-500 doctor-info-block">
+                <div class="left-block">
+                    <div class="avatar-wrap">
+                        <img src="./public/img/pics/ava130-2.png" alt="Мельков Евгений Евгеньевич">
+                    </div>
+                    <div class="rating-wrap"><strong>6.4</strong>
+                        <ul>
+                            <li class="full"></li>
+                            <li class="full"></li>
+                            <li class="full"></li>
+                            <li class="empty"></li>
+                            <li class="empty"></li>
+                        </ul>
+                    </div><span class="qty-reviews">2 отзыва</span>
+                </div>
+                <div class="right-block">
+                    <h3 class="name">Мельков Евгений Евгеньевич</h3><strong class="prof">Хирург, Анестезиолог </strong>
+                    <div class="skills-wrap"><span class="left">Стаж: <b>25 лет</b></span><span class="right">Прием: <b>1 200 <span>i</span>
+                        </b>
+                        </span>
+                    </div>
+                    <div class="address-wrap"><i></i> ул. Клары Цеткин, д. 33, к. 28</div>
+                    <div class="metro-wrap"><i></i> Войсковая</div>
+                    <a href="#map-page" data-transition="fade" class="link-to-map"></a>
+                </div>
+            </div>
+        </div>
+        <div role="main" class="ui-content doctor-info-content">
+            <p class="main-info">Врач-хирург, трансфузиолог. Проводит удаление элементов кожи (невусы,папилломы, кератомы и др.), иссечение атером, липом, бородавок, лечение фурункулов, абсцессов, вросшего ногтя, в т.ч. запущенных,осложненных форм, а также квантовую терапию
+                крови (ВЛОК, ВУФОК), плазмаферез, детоксикацию и лечение экстремальных состояний.</p>
+            <div class="doctor-info-item"><strong class="w-img img-1"><i></i> Специализация</strong>
+                <ul class="skills-listing">
+                    <li>Удаление элементов кожи (невусы, папилломы, кератомы и др.);</li>
+                    <li>иссечение атером, липом, бородавок;</li>
+                    <li>лечение фурункулов, абсцессов, вросшего ногтя, в т.ч. запущенных, осложненных форм;</li>
+                    <li>владение радиоволновой хирургией (аппарат "Сургитрон"), общехирургическими, методиками;</li>
+                    <li>квантовая терапия крови <a href='#'>(ВЛОК, ВУФОК)</a>;</li>
+                    <li>гравитационная хирургия крови (плазмаферез);</li>
+                    <li>комбинированная внутривенная терапия;</li>
+                    <li>детоксикация и лечение экстремальных состояний.</li>
+                </ul>
+            </div>
+            <div class="doctor-info-item"><strong class="w-img img-2"><i></i> Образование</strong>
+                <ul class="skills-listing">
+                    <li>Первый Московский государственный <a href='#'>медицинский институт им. И.М. Сеченова</a> (1985г.)</li>
+                    <li>Интернатура по хирургии на базе <a href='#'>городской клинической больницы №7, Москва</a> (1986 г.)</li>
+                    <li>Ординатура по анестезиологии-реаниматологии на базе <a href='#'>Научно-исследовательского трансплантологии и искусственных органов</a> (1992г.)</li>
+                </ul>
+            </div>
+            <div class="doctor-info-item"><strong class="w-img img-3"><i></i> Курсы повышения квалификации</strong>
+                <ul class="skills-listing">
+                    <li>Профессиональная переподготовка по хирургии и трансфузиологии на базе Московского областного научно-исследовательского клинического института им. М.Ф. Владимирского (2008 г.)</li>
+                </ul>
+            </div>
+            <div class="doctor-info-item"><strong class="w-img img-4"><i></i> Отзывы пациентов о враче:</strong>
+                <div class="total-review-block"><strong>Общее мнение пациентов по 2м отзывам:</strong><span class="total">Хорошо.</span>
+                    <div class="item">
+                        <ul>
+                            <li class="full"></li>
+                            <li class="full"></li>
+                            <li class="full"></li>
+                            <li class="empty"></li>
+                            <li class="empty"></li>
+                        </ul><span>квалификация</span>
+                    </div>
+                    <div class="item">
+                        <ul>
+                            <li class="full"></li>
+                            <li class="full"></li>
+                            <li class="full"></li>
+                            <li class="full"></li>
+                            <li class="empty"></li>
+                        </ul><span>внимание</span>
+                    </div>
+                    <div class="item">
+                        <ul>
+                            <li class="full"></li>
+                            <li class="full"></li>
+                            <li class="full"></li>
+                            <li class="full"></li>
+                            <li class="full"></li>
+                        </ul><span>цена-качество</span>
+                    </div>
+                </div>
+            </div>
+            <div class="doctor-info-item list-of-reviews"><strong>Отзывы пациентов:</strong>
+                <ul>
+                    <li>
+                        <div class="review-text-wrapper">
+                            <div class="review-text-block">
+                                <p>Врач решил мою проблему, ответил на все вопросы. Все хорошо, спасибо</p>
+                            </div><i></i>
+                        </div>
+                        <div class="review-author-block"><strong>Отлично!</strong><span>Флоренция</span><em>24/07/2014</em>
+                        </div>
+                        <div class="items-wrapper">
+                            <div class="item">
+                                <ul>
+                                    <li class="full"></li>
+                                    <li class="full"></li>
+                                    <li class="full"></li>
+                                    <li class="empty"></li>
+                                    <li class="empty"></li>
+                                </ul><span>квалификация</span>
+                            </div>
+                            <div class="item">
+                                <ul>
+                                    <li class="full"></li>
+                                    <li class="full"></li>
+                                    <li class="full"></li>
+                                    <li class="empty"></li>
+                                    <li class="empty"></li>
+                                </ul><span>внимание</span>
+                            </div>
+                            <div class="item">
+                                <ul>
+                                    <li class="full"></li>
+                                    <li class="full"></li>
+                                    <li class="full"></li>
+                                    <li class="full"></li>
+                                    <li class="full"></li>
+                                </ul><span>цена-качество</span>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="review-text-wrapper">
+                            <div class="review-text-block">
+                                <p>Прием оправдал все мои ожидания.</p>
+                            </div><i></i>
+                        </div>
+                        <div class="review-author-block"><strong>Отлично!</strong><span>Илья</span><em>30/06/2013</em>
+                        </div>
+                        <div class="items-wrapper">
+                            <div class="item">
+                                <ul>
+                                    <li class="full"></li>
+                                    <li class="full"></li>
+                                    <li class="full"></li>
+                                    <li class="empty"></li>
+                                    <li class="empty"></li>
+                                </ul><span>квалификация</span>
+                            </div>
+                            <div class="item">
+                                <ul>
+                                    <li class="full"></li>
+                                    <li class="full"></li>
+                                    <li class="full"></li>
+                                    <li class="full"></li>
+                                    <li class="empty"></li>
+                                </ul><span>внимание</span>
+                            </div>
+                            <div class="item">
+                                <ul>
+                                    <li class="full"></li>
+                                    <li class="full"></li>
+                                    <li class="full"></li>
+                                    <li class="full"></li>
+                                    <li class="full"></li>
+                                </ul><span>цена-качество</span>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="send-review-block"><a href="#send-review" data-transition="slideup">Оставить отзыв</a><span>нам важно ваше мнение! </span>
+            </div>
+        </div>
+        <div data-role="footer" data-position="fixed" data-tap-toggle="false">
+            <div class="fixed-inn">
+                <div class="w-500">
+                    <div class="to-form-doctor-btn"><a href="#doctor-form" data-transition="slide">записаться <i></i></a>
+                    </div>
+                    <div class="call-doctor-btn"><a href="tel:8-495-236-72-76"><i></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="mask-overlay"></div>
+    </div>
+    <div data-role="page" id="doctor-form" data-title="Записаться на прием">
+        <div data-role="header" data-position="fixed" data-tap-toggle="false" class="fixed">
+            <div class="fixed-inn">
+                <a href="#page-doctor" data-transition="slide" data-direction="reverse" class="back-link"></a><strong>Записаться на прием</strong>
+            </div>
+            <div class="fixed-inn w-500 doctor-info-block">
+                <div class="left-block">
+                    <div class="avatar-wrap">
+                        <img src="./public/img/pics/ava130-2.png" alt="Мельков Евгений Евгеньевич">
+                    </div>
+                </div>
+                <div class="right-block">
+                    <h3 class="name">Мельков Евгений Евгеньевич</h3><strong class="prof">Хирург, Анестезиолог </strong>
+                </div>
+            </div>
+        </div>
+        <div role="main" class="ui-content doctor-order-form">
+            <form action="#">
+                <div class="form-item item-1">
+                    <input type="text" placeholder="Ваше имя..." class="required"><i></i>
+                </div>
+                <div class="form-item item-2">
+                    <input type="tel" placeholder="Ваш телефон..." onkeypress="return (event.charCode &gt;= 40 &amp;&amp; event.charCode &lt;= 57) || event.charCode == 32" maxlength="20" id="phoneinput"><i></i>
+                </div>
+                <div class="form-item item-3">
+                    <textarea cols="20" rows="10" placeholder="Ваш коментарий..."></textarea><i></i>
+                </div>
+                <div class="send-button-wrap"><a href="#order-success" data-transition="fade"><i></i> отправить</a>
+                </div>
+            </form>
+            <div class="call-us"><strong>Записаться на прием </strong><span>по номеру <a href='tel:8-495-236-72-76'>8 (495) 236-72-76</a></span><i class="iphone-bg"></i>
+            </div><a href="http://docdoc.ru/" class="link-to-site">Перейти на основную версию сайта</a><i class="doctor-bottom"></i>
+        </div>
+    </div>
+    <div data-role="page" id="order-success" data-title="Вы записаны на прием!">
+        <div id="rightPanelOrder" data-role="panel" data-position="right" data-display="reveal" class="rightPanel">
+            <div class="aside-header"><span class="logo-small"></span>
+                <div class="city-dropdown-wrapper">
+                    <select>
+                        <option>Екатеринбург</option>
+                        <option>Москва</option>
+                        <option>Санкт-Петербург</option>
+                    </select><i></i>
+                </div>
+            </div>
+            <div class="aside-description">
+                <p>На нашем портале вы можете выбрать врача и записаться к нему на прием.</p>
+                <p>Мы поможем вам найти хорошего специалиста!</p>
+            </div>
+            <div class="aside-block mb-15"><strong>О проекте</strong>
+                <ul>
+                    <li><a href="#">О сервисе</a><i></i>
+                    </li>
+                    <li><a href="#">Все врачи</a><i></i>
+                    </li>
+                    <li><a href="#">Все клиники</a><i></i>
+                    </li>
+                </ul>
+            </div>
+            <div class="aside-block"><strong>Врачам и клиникам</strong>
+                <ul>
+                    <li><a href="#">Личный кабинет</a><i></i>
+                    </li>
+                    <li><a href="#">Регистрация</a><i></i>
+                    </li>
+                </ul>
+            </div>
+            <div class="aside-foo"><a href="http://docdoc.ru/">Перейти на основную версию сайта</a>
+            </div>
+        </div>
+        <div data-role="header" data-position="fixed" data-tap-toggle="false" class="fixed">
+            <div class="fixed-inn">
+                <a href="#index-page" data-transition="fade" class="close-btn"></a><strong>Вы записаны на прием!</strong>
+                <a href="#rightPanelOrder" class="panel-btn"></a>
+            </div>
+        </div>
+        <div role="main" class="ui-content success-block">
+            <div class="order-success-content"><strong class="success-title">Вы записаны на прием!</strong>
+                <div class="success-text">
+                    <p class="gray">Спасибо за вашу заявку. Наш менеджер свяжется с вами в ближайшее время.</p>
+                    <p class="green">P.S: команда DocDoc благодарит вас за использавание услуг нашего портала!</p>
+                </div><i class="success-check"></i>
+            </div>
+            <div class="order-success-bottom-block">
+                <div class="link-to-favorites"><a href="#">Добавить  сайт в закладки</a><i></i>
+                </div><a href="http://docdoc.ru/" class="link-to-site">Перейти на основную версию сайта</a><i class="doctor-bottom"></i>
+            </div>
+        </div>
+        <div class="mask-overlay"></div>
+    </div>
+    <div data-role="page" id="order-error" data-title="Ошибка!">
+        <div data-role="header" data-position="fixed" data-tap-toggle="false" class="fixed">
+            <div class="fixed-inn">
+                <a href="#doctor-form" data-transition="flip" class="back-link"></a><strong>Записаться на прием</strong>
+            </div>
+        </div>
+        <div role="main" class="ui-content success-block">
+            <div class="order-success-content"><strong class="success-title order-title">Ошибка!</strong>
+                <div class="success-text">
+                    <p class="gray">Внимание! Ваша анкета записи не была отправлена. Попробуйте снова.Перед отправкой проверьте, все ли поля с информацией заполнены правильно.</p>
+                    <p class="green">P.S: команда DocDoc благодарит вас за использавание услуг нашего портала!</p>
+                </div><i class="success-check"></i>
+            </div>
+            <div class="order-success-bottom-block">
+                <div class="link-to-favorites"><a href="#doctor-form" data-transition="flip">Попробовать снова</a>
+                </div><a href="http://docdoc.ru/" class="link-to-site">Перейти на основную версию сайта</a><i class="doctor-bottom"></i>
+            </div>
+        </div>
+    </div>
+    <div data-role="page" id="select-specialist" data-title="Выбрать специалиста">
+        <div data-role="header" data-position="fixed" data-tap-toggle="false" class="fixed">
+            <div class="fixed-inn">
+                <a href="#index-page" data-transition="slidedown" class="back-link"></a><strong>Выбрать специалиста:</strong>
+            </div>
+            <form class="ui-filterable">
+                <input id="filterSpec-input" data-type="search" placeholder="Быстрый поиск" data-clear-btn="false"><i></i>
+            </form>
+        </div>
+        <div role="main" class="ui-content c-content">
+            <ul id="listSpec" data-role="listview" data-filter="true" data-input="#filterSpec-input" data-autodividers="false">
+                <li data-role="list-divider">А</li>
+                <li><strong>Акушер</strong><span>оказание помощи беременным и роженицам во время родов</span><em>235</em><i></i>
+                </li>
+                <li><strong>Аллерголог</strong><span>лечение и профилактика аллергических заболеваний</span><em>46</em><i></i>
+                </li>
+                <li><strong>Андролог</strong><span>лечение органов мужской мочеполовой системы</span><em>8764</em><i></i>
+                </li>
+                <li><strong>Анестезиолог</strong><span>подготовка к операции и реабилитация после</span><em>897</em><i></i>
+                </li>
+                <li><strong>Анестезиолог</strong><span>диагностика и лечение заболеваний органов желудочно-кишечного тракта</span><em>6456</em><i></i>
+                </li>
+                <li data-role="list-divider">В</li>
+                <li><strong>Венеролог</strong><span>диагностика и лечение венерических, кожных и урологических заболеваний</span><em>45</em><i></i>
+                </li>
+                <li data-role="list-divider">Г</li>
+                <li><strong>Гастроэнтеролог</strong><span>диагностика и лечение заболеваний органов желудочно-кишечного тракта</span><em>56</em><i></i>
+                </li>
+                <li><strong>Гастроэндекренолог</strong><span>подготовка к операции и реабилитация после</span><em>1</em><i></i>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div data-role="page" id="select-metro" data-title="Ближайшее метро">
+        <div data-role="header" data-position="fixed" data-tap-toggle="false" class="fixed">
+            <div class="fixed-inn">
+                <a href="#index-page" data-transition="slidedown" class="back-link"></a><strong>Ближайшее метро:</strong>
+            </div>
+            <form class="ui-filterable">
+                <input id="filterMetro-input" data-type="search" placeholder="Поиск по названию..." data-clear-btn="false"><i></i>
+            </form>
+        </div>
+        <div role="main" class="ui-content c-content">
+            <ul id="listMetro" data-role="listview" data-filter="true" data-inset="true" data-input="#filterMetro-input" data-autodividers="false">
+                <li data-role="list-divider">А</li>
+                <li><strong>Авиамоторная</strong><i></i>
+                </li>
+                <li><strong>Автозаводская</strong><i></i>
+                </li>
+                <li><strong>Академическая</strong><i></i>
+                </li>
+                <li><strong>Александровский сад</strong><i></i>
+                </li>
+                <li data-role="list-divider">М</li>
+                <li><strong>Менделеевская</strong><i></i>
+                </li>
+                <li data-role="list-divider">К</li>
+                <li><strong>Краснопресненская</strong><i></i>
+                </li>
+                <li><strong>Клександровский сад</strong><i></i>
+                </li>
+                <li data-role="list-divider">Н</li>
+                <li><strong>Новослободская</strong><i></i>
+                </li>
+                <li data-role="list-divider">С</li>
+                <li><strong>Серпуховская</strong><i></i>
+                </li>
+                <li data-role="list-divider">Ш</li>
+                <li><strong>Шhоссе Энтузиастов</strong><i></i>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div data-role="page" id="send-review" data-title="Оставить отзыв">
+        <div data-role="header" data-position="fixed" data-tap-toggle="false" class="fixed">
+            <div class="fixed-inn">
+                <a href="#page-doctor" data-transition="slidedown" class="back-link"></a><strong>Оставить отзыв</strong>
+            </div>
+        </div>
+        <div role="main" class="ui-content send-review-wrapper">
+            <form action="#">
+                <div class="send-review-top-block">
+                    <div class="send-review-title"><strong>Ваш отзыв:</strong>
+                        <p>Нам важно ваше мнение, пишите все о чем наболело.</p>
+                    </div>
+                    <div class="send-review-form">
+                        <div class="form-item item-1">
+                            <input type="text" placeholder="Ваше имя..." class="required"><i></i>
+                        </div>
+                        <div class="form-item item-2">
+                            <input type="tel" placeholder="Ваш номер..."><i></i>
+                        </div>
+                        <div class="form-item item-3"><a href="#" class="textarea-spoiler"><i></i> Добавить коментарий</a>
+                        </div>
+                        <div class="form-item item-4">
+                            <textarea cols="20" rows="10" placeholder="Ваш коментарий..."></textarea><i></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="review-rating-block">
+                    <div class="review-rating-item">
+                        <div class="range-wrap">
+                            <input type="range" min="0" max="5" value="4" data-highlight="true">
+                        </div><span>квалификация</span>
+                    </div>
+                    <div class="review-rating-item">
+                        <div class="range-wrap">
+                            <input type="range" min="0" max="5" value="3" data-highlight="true">
+                        </div><span>внимание</span>
+                    </div>
+                    <div class="review-rating-item">
+                        <div class="range-wrap">
+                            <input type="range" min="0" max="5" value="2" data-highlight="true">
+                        </div><span>цена- качество</span>
+                    </div>
+                </div>
+                <div class="send-review-btn-block"><a href="#review-success" data-transition="fade"><i></i> высказаться</a>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div data-role="page" id="review-success" data-title="Вы оставили отзыв!">
+        <div id="rightPanelReview" data-role="panel" data-position="right" data-display="reveal" class="rightPanel">
+            <div class="aside-header"><span class="logo-small"></span>
+                <div class="city-dropdown-wrapper">
+                    <select>
+                        <option>Екатеринбург</option>
+                        <option>Москва</option>
+                        <option>Санкт-Петербург</option>
+                    </select><i></i>
+                </div>
+            </div>
+            <div class="aside-description">
+                <p>На нашем портале вы можете выбрать врача и записаться к нему на прием.</p>
+                <p>Мы поможем вам найти хорошего специалиста!</p>
+            </div>
+            <div class="aside-block mb-15"><strong>О проекте</strong>
+                <ul>
+                    <li><a href="#">О сервисе</a><i></i>
+                    </li>
+                    <li><a href="#">Все врачи</a><i></i>
+                    </li>
+                    <li><a href="#">Все клиники</a><i></i>
+                    </li>
+                </ul>
+            </div>
+            <div class="aside-block"><strong>Врачам и клиникам</strong>
+                <ul>
+                    <li><a href="#">Личный кабинет</a><i></i>
+                    </li>
+                    <li><a href="#">Регистрация</a><i></i>
+                    </li>
+                </ul>
+            </div>
+            <div class="aside-foo"><a href="http://docdoc.ru/">Перейти на основную версию сайта</a>
+            </div>
+        </div>
+        <div data-role="header" data-position="fixed" data-tap-toggle="false" class="fixed">
+            <div class="fixed-inn">
+                <a href="#page-doctor" data-transition="fade" class="close-btn"></a><strong>Вы оставили отзыв!</strong>
+                <a href="#rightPanelReview" class="panel-btn"></a>
+            </div>
+        </div>
+        <div role="main" class="ui-content success-block">
+            <div class="order-success-content"><strong class="success-title">Вы оставили отзыв!</strong>
+                <div class="success-text">
+                    <p class="gray">Спасибо за ваш отзыв. Нам важно ваше мнение.</p>
+                    <p class="green">P.S: команда DocDoc благодарит вас за использавание услуг нашего портала!</p>
+                </div><i class="success-check"></i>
+            </div>
+            <div class="order-success-bottom-block">
+                <div class="link-to-favorites"><a href="#">Добавить  сайт в закладки</a><i></i>
+                </div><a href="http://docdoc.ru/" class="link-to-site">Перейти на основную версию сайта</a><i class="doctor-bottom"></i>
+            </div>
+        </div>
+        <div class="mask-overlay"></div>
+    </div>
+    <div data-role="page" id="review-error" data-title="Ошибка!">
+        <div data-role="header" data-position="fixed" data-tap-toggle="false" class="fixed">
+            <div class="fixed-inn">
+                <a href="#send-review" data-transition="flip" class="back-link"></a><strong>Оставить отзыв</strong>
+            </div>
+        </div>
+        <div role="main" class="ui-content success-block">
+            <div class="order-success-content"><strong class="success-title">Ошибка!</strong>
+                <div class="success-text">
+                    <p class="gray">Внимание! Ваш отзыв не был отправлен. Попробуйте снова.Перед отправкой проверьте, все ли поля с информацией заполнены правильно.</p>
+                    <p class="green">P.S: команда DocDoc благодарит вас за использавание услуг нашего портала!</p>
+                </div><i class="success-check"></i>
+            </div>
+            <div class="order-success-bottom-block">
+                <div class="link-to-favorites"><a href="#send-review" data-transition="flip">Попробовать снова</a>
+                </div><a href="http://docdoc.ru/" class="link-to-site">Перейти на основную версию сайта</a><i class="doctor-bottom"></i>
+            </div>
+        </div>
+    </div>
+    <div data-role="page" id="map-page" data-title="Информация о враче" class="ui-responsive-panel">
+        <div id="rightPanelMap" data-role="panel" data-position="right" data-display="reveal" class="rightPanel">
+            <div class="aside-header"><span class="logo-small"></span>
+                <div class="city-dropdown-wrapper">
+                    <select>
+                        <option>Екатеринбург</option>
+                        <option>Москва</option>
+                        <option>Санкт-Петербург</option>
+                    </select><i></i>
+                </div>
+            </div>
+            <div class="aside-description">
+                <p>На нашем портале вы можете выбрать врача и записаться к нему на прием.</p>
+                <p>Мы поможем вам найти хорошего специалиста!</p>
+            </div>
+            <div class="aside-block mb-15"><strong>О проекте</strong>
+                <ul>
+                    <li><a href="#">О сервисе</a><i></i>
+                    </li>
+                    <li><a href="#">Все врачи</a><i></i>
+                    </li>
+                    <li><a href="#">Все клиники</a><i></i>
+                    </li>
+                </ul>
+            </div>
+            <div class="aside-block"><strong>Врачам и клиникам</strong>
+                <ul>
+                    <li><a href="#">Личный кабинет</a><i></i>
+                    </li>
+                    <li><a href="#">Регистрация</a><i></i>
+                    </li>
+                </ul>
+            </div>
+            <div class="aside-foo"><a href="http://docdoc.ru/">Перейти на основную версию сайта</a>
+            </div>
+        </div>
+        <div data-role="header" data-position="fixed" data-tap-toggle="false" class="fixed">
+            <div class="fixed-inn">
+                <a href="#find-doctor" data-transition="slide" data-direction="reverse" class="back-link"></a><strong>Информация о враче</strong>
+                <a href="#rightPanelMap" class="panel-btn"></a>
+            </div>
+        </div>
+        <div role="main" class="ui-content map-content">
+            <div id="map_canvas"></div>
+            <script>
+                $(document).on('pageinit', '#map-page', function() {
+                    function mapInit() {
+                        var geocoder = new google.maps.Geocoder(),
+                            mapOptions = {
+                                zoom: 14,
+                                scrollwheel: false,
+                                navigationControl: false,
+                                mapTypeControl: false,
+                                scaleControl: false,
+                                zoomControl: false,
+                                streetViewControl: false,
+                                mapTypeId: google.maps.MapTypeId.ROADMAP
+                            },
+                            map = new google.maps.Map(document.getElementById('map_canvas'), mapOptions);
+                        geocoder.geocode({
+                                'address': 'ул. Клары Цеткин, д. 33, к. 28'
+                            },
+                            function(results, status) {
+                                if (status == google.maps.GeocoderStatus.OK) {
+                                    var mapLatLng = new google.maps.LatLng(
+                                        results[0].geometry.location.lat(),
+                                        results[0].geometry.location.lng()
+                                    ),
+                                        marker = new google.maps.Marker({
+                                            position: mapLatLng,
+                                            visible: false
+                                        });
+                                    map.setCenter(mapLatLng, mapOptions.zoom);
+                                    marker.setMap(map);
+                                }
+                                var myOptions = {
+                                    content: document.getElementById('infobox'),
+                                    disableAutoPan: true,
+                                    pixelOffset: new google.maps.Size(-100, -14),
+                                    position: mapLatLng,
+                                    closeBoxURL: '',
+                                    isHidden: false,
+                                    alignBottom: true,
+                                    pane: 'mapPane',
+                                    enableEventPropagation: true,
+                                    infoBoxClearance: new google.maps.Size(1, 1)
+                                };
+                                var ibLabel = new InfoBox(myOptions);
+                                ibLabel.open(map);
+                            });
+                    }
+                    mapInit();
+                });
+            </script>
+            <div class="infobox-wrapper">
+                <div id="infobox">
+                    <div class="infobox-inn">
+                        <div class="left-block">
+                            <img src="./public/img/pics/ava65-2.png" alt="Мельков Евгений Евгеньевич">
+                        </div>
+                        <div class="right-block"><strong>ул. Клары Цеткин, д. 33, к. 28</strong><em>м. Войковская</em>
+                        </div>
+                    </div><i class="triangle"></i>
+                </div>
+            </div>
+            <a href="#page-doctor" data-transition="fade" class="close-map"></a>
+        </div>
+        <div data-role="footer" data-position="fixed" data-tap-toggle="false">
+            <div class="fixed-inn">
+                <div class="w-500">
+                    <div class="to-form-doctor-btn"><a href="#doctor-form" data-transition="slide">записаться <i></i></a>
+                    </div>
+                    <div class="call-doctor-btn"><a href="tel:8-495-236-72-76"><i></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="mask-overlay"></div>
+    </div>
+</body>
+
+</html>
