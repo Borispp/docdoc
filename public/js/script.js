@@ -1,6 +1,6 @@
 $(function() {
   var hideHeader;
-  $('ul[data-input=\"#filterSpec-input\"] > li:not(".ui-li-divider")').click(function(e) {
+  $('ul[data-input=\"#filterSpec-input\"] > li:not([data-role="list-divider"])').on('click', function(e) {
     var text;
     e.preventDefault();
     $(this).addClass('selected').siblings().removeClass('selected');
@@ -9,7 +9,7 @@ $(function() {
     $(this).parents('#select-specialist').find('.back-link').click();
     return $('#listSpec .ui-li-divider').show();
   });
-  $('ul[data-input=\"#filterMetro-input\"] > li:not(".ui-li-divider")').click(function(e) {
+  $('ul[data-input=\"#filterMetro-input\"] > li:not([data-role="list-divider"])').on('click', function(e) {
     var text;
     e.preventDefault();
     $(this).addClass('selected').siblings().removeClass('selected');
