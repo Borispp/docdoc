@@ -58,22 +58,17 @@ $ ->
     hideHeader()
 
     $('input#filterMetro-input').on 'keyup', ->
-        if $(this).val() is 0
+        unless @value
             $('#listMetro .ui-li-divider').show()
         else
             $('#listMetro .ui-li-divider').hide()
 
     $('input#filterSpec-input').on 'keyup', ->
-        if $(this).val() is 0
+        unless @value
             $('#listSpec .ui-li-divider').show()
         else
             $('#listSpec .ui-li-divider').hide()
 
-    $('input#filterMetro-input').on 'focusout', ->
-        $('#listMetro .ui-li-divider').show()
-
-    $('input#filterSpec-input').on 'focusout', ->
-        $('#listSpec .ui-li-divider').show()
 
 
 

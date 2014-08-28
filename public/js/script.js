@@ -68,23 +68,17 @@ $(function() {
   };
   hideHeader();
   $('input#filterMetro-input').on('keyup', function() {
-    if ($(this).val() === 0) {
+    if (!this.value) {
       return $('#listMetro .ui-li-divider').show();
     } else {
       return $('#listMetro .ui-li-divider').hide();
     }
   });
-  $('input#filterSpec-input').on('keyup', function() {
-    if ($(this).val() === 0) {
+  return $('input#filterSpec-input').on('keyup', function() {
+    if (!this.value) {
       return $('#listSpec .ui-li-divider').show();
     } else {
       return $('#listSpec .ui-li-divider').hide();
     }
-  });
-  $('input#filterMetro-input').on('focusout', function() {
-    return $('#listMetro .ui-li-divider').show();
-  });
-  return $('input#filterSpec-input').on('focusout', function() {
-    return $('#listSpec .ui-li-divider').show();
   });
 });
